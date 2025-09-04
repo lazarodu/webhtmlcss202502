@@ -1,0 +1,10 @@
+@media(max-width: 570px) {
+    main#detalhes section {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    main#detalhes section img {
+        width: 100%;
+    }
+}
