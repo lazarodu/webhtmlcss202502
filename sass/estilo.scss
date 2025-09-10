@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    border: 0;
+    box-sizing: border-box;
+    font-family: Inter, sans-serif;
+}
+
+$primary: #4BB9F5;
+$secondary: #F5C86E;
+$black: #000;
+$white: #fff;
+
+
+// dark mode
+$light-bg: #fff;
+$light-text: #000;
+$dark-bg: #000;
+$dark-text: #fff;
+
+@mixin theme($bg, $text) {
+    background-color: $bg;
+    color: $text;
+
+    .switch {
+        background-color: $text;
+        color: $bg;
+        padding: 0.5rem;
+        border-radius: 0.5rem;
+        cursor: pointer;
+    }
+}
+
+input#theme {
+    display: none;
+}
+
+.container {
+    @include theme($light-bg, $light-text)
+}
+
+input#theme:checked~.container {
+    @include theme($dark-bg, $dark-text)
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 0.5rem solid $secondary;
+    height: 5rem;
+
+    img {
+        padding: 0.5rem;
+    }
+
+    nav {
+        padding: 0.5rem;
+        display: flex;
+        align-items: center;
+
+        a {
+            padding: 0.7rem;
+            background-color: $secondary;
+            text-decoration: none;
+            border-radius: 0.7rem;
+        }
+    }
+}
+
+main {
+    min-height: calc(100vh - 8rem);
+
+    &#index {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+        gap: 1rem;
+        padding: 1rem;
+
+        section {
+            border: 0.3rem solid $primary;
+            border-radius: 0.5rem;
+            display: flex;
+            flex-direction: column;
+        }
+    }
+
+    &#detalhes {
+        display: flex;
+        justify-content: center;
+
+        section {
+            border: 0.3rem solid $primary;
+            border-radius: 0.5rem;
+            display: flex;
+
+            img {
+                width: 50%;
+                height: auto;
+                object-fit: fill;
+            }
+
+            aside {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                width: 50%;
+            }
+        }
+    }
+}
+
+footer {
+    display: flex;
+    align-items: center;
+    border-top: 0.5rem solid $secondary;
+    height: 3rem;
+}

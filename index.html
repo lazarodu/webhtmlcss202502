@@ -5,12 +5,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vinyl Web</title>
-    <link rel="stylesheet" href="./css/estilo.css">
+    <link rel="stylesheet" href="./css/output.css">
     <link rel="stylesheet" href="./css/menu.css">
 </head>
 
 <body>
-    <header>
+    <input type="checkbox" id="theme">
+    <header class="container">
         <img src="./img/logo.svg" />
         <input type="checkbox" id="menu">
         <nav>
@@ -20,11 +21,12 @@
                 <span></span>
             </label>
             <div>
+                <label for="theme" class="switch">Trocar</label>
                 <a href="">Login</a>
             </div>
         </nav>
     </header>
-    <main id="index">
+    <main id="index" class="container">
         <section>
             <img src="./img/acdc.png" alt="Vinil ACDC">
             <p>
@@ -97,7 +99,7 @@
             </p>
         </section>
     </main>
-    <footer>
+    <footer class="container">
         @copyleft
     </footer>
 </body>
