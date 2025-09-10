@@ -1,0 +1,103 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  border: 0;
+  box-sizing: border-box;
+  font-family: Inter, sans-serif;
+}
+
+input#theme {
+  display: none;
+}
+
+.container {
+  background-color: #fff;
+  color: #000;
+}
+.container .switch {
+  background-color: #000;
+  color: #fff;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+}
+
+input#theme:checked ~ .container {
+  background-color: #000;
+  color: #fff;
+}
+input#theme:checked ~ .container .switch {
+  background-color: #fff;
+  color: #000;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 0.5rem solid #F5C86E;
+  height: 5rem;
+}
+header img {
+  padding: 0.5rem;
+}
+header nav {
+  padding: 0.5rem;
+  display: flex;
+  align-items: center;
+}
+header nav a {
+  padding: 0.7rem;
+  background-color: #F5C86E;
+  text-decoration: none;
+  border-radius: 0.7rem;
+}
+
+main {
+  min-height: calc(100vh - 8rem);
+}
+main#index {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+  gap: 1rem;
+  padding: 1rem;
+}
+main#index section {
+  border: 0.3rem solid #4BB9F5;
+  border-radius: 0.5rem;
+  display: flex;
+  flex-direction: column;
+}
+main#detalhes {
+  display: flex;
+  justify-content: center;
+}
+main#detalhes section {
+  border: 0.3rem solid #4BB9F5;
+  border-radius: 0.5rem;
+  display: flex;
+}
+main#detalhes section img {
+  width: 50%;
+  height: auto;
+  object-fit: fill;
+}
+main#detalhes section aside {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 50%;
+}
+
+footer {
+  display: flex;
+  align-items: center;
+  border-top: 0.5rem solid #F5C86E;
+  height: 3rem;
+}
+
+/*# sourceMappingURL=output.css.map */

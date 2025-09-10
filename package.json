@@ -1,0 +1,24 @@
+{
+  "name": "webhtmlcss202502",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "scss": "sass sass/estilo.scss css/output.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lazarodu/webhtmlcss202502.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lazarodu/webhtmlcss202502/issues"
+  },
+  "homepage": "https://github.com/lazarodu/webhtmlcss202502#readme",
+  "dependencies": {
+    "sass": "^1.92.1"
+  }
+}
